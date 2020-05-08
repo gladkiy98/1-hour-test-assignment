@@ -1,0 +1,28 @@
+require:
+  - rubocop-performance
+AllCops:
+  TargetRubyVersion: 2.6
+  Exclude:
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'tmp/**/*'
+    - 'spec/**/*'
+    - 'Rakefile'
+Metrics/LineLength:
+  Max: 130
+Style/Documentation:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 30
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context', 'define']
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Metrics/AbcSize:
+  Max: 20
+Lint/AmbiguousOperator:
+  Enabled: false
