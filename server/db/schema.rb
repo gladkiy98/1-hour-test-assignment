@@ -12,29 +12,29 @@
 
 ActiveRecord::Schema.define(version: 2020_05_08_095757) do
 
-  create_table "comments", force: :cascade do |t|
-    t.string "body"
-    t.integer "status"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "commentable_type", null: false
-    t.integer "commentable_id", null: false
-    t.index ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id"
+  create_table 'comments', force: :cascade do |t|
+    t.string 'body'
+    t.integer 'status'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.string 'commentable_type', null: false
+    t.integer 'commentable_id', null: false
+    t.index ['commentable_type', 'commentable_id'], name: 'index_comments_on_commentable_type_and_commentable_id'
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string "body"
-    t.integer "user_id"
-    t.integer "status", default: 0
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'posts', force: :cascade do |t|
+    t.string 'body'
+    t.integer 'user_id'
+    t.integer 'status', default: 0
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'users', force: :cascade do |t|
+    t.string 'username'
+    t.string 'password_digest'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
 end

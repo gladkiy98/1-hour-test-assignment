@@ -2,7 +2,7 @@
 
 class AuthenticationsController < ApplicationController
   skip_before_action :authenticate_user, only: :create
-  expose :blogger, -> { User.find_by(username: params[:username], status: :blogger) }
+  expose :blogger, -> { User.find_by(username: params[:username]) }
 
   def create
     if blogger&.authenticate(params[:password])
